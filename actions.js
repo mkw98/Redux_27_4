@@ -33,7 +33,7 @@ function editComment(id, text) {
 }
 const boundEditComment = (id, text) => dispatch(editComment(id, text));
 
-function thumbUpComment(id) {
+function thumbUpComment(id, votes) {
 	return {
 		type: THUMB_UP_COMMENT,
 		id: id
@@ -41,7 +41,7 @@ function thumbUpComment(id) {
 }
 const boundThumbUpComment = id => dispatch(thumbUpComment(id));
 
-function thumbDownComment(id) {
+function thumbDownComment(id, votes) {
 	return {
 		type: THUMB_DOWN_COMMENT,
 		id: id
