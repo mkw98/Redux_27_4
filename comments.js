@@ -18,7 +18,7 @@ export function comments(state = [], action) {
         case EDIT_COMMENT:
         	return state.map(comment => {
 				if (comment.id === action.id) {
-					return {...comment, text: action.text} ;
+					return {...comment, text: action.text};
 				} else {
 					return comment;
 				}
